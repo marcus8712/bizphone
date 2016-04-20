@@ -1,0 +1,63 @@
+.navbar {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 50px;
+    /* background: #fff; */
+    z-index: 99;
+    margin-bottom: 40px;
+}
+
+.navbar > .logo {
+    float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navbar > .logo > img {
+    width: 40px;
+    display: inline-block;
+}
+
+
+
+.header {
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    font-family: "Poppins",'Helvetica Neue',Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2C83C5;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+img.wave {
+    width: 100%;
+}
+
+.row.center{
+    text-align: center;
+}
+
+.block{
+    margin-bottom: 40px;
+}
+
+.fa{
+    margin: 0 8px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: 0;
+}
