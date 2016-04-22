@@ -188,6 +188,38 @@
     margin-top: -2px;
 }
 
+/*  Thumbnail */
+.project > .thumbnail {
+    position: relative;
+}
+.project > .thumbnail:hover{
+    background: black;
+}
+
+.project > .thumbnail:hover button{
+    display: block;
+}
+
+.project > .thumbnail button {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display:none;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    border-radius: 0 !important;
+    
+}
+.project > .thumbnail button img{
+    height: 10%;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 /* Name */
 .project > .project-name{
     font-size: 18px;
@@ -200,6 +232,60 @@
 .project > .file-name{
     margin-top: 15px;
 }
+
+/*--------------------
+    OVERLAY
+--------------------*/
+
+/* to the body element */
+.noscroll { overflow: hidden; }
+
+.overlay { 
+   position: fixed; 
+   overflow-y: scroll;
+   top: 0; right: 0; bottom: 0; left: 0; 
+    z-index: 1;
+    
+}
+
+[aria-hidden="true"] { 
+    display: none; 
+}
+[aria-hidden="false"] { 
+    display: block; 
+    
+}
+
+
+/* this code is not strictly necessary: just to make this demo a bit pleasant */
+
+.overlay div {
+   margin: 20px auto;
+   width: 100%;
+   max-width: 1366px;
+  
+}
+.overlay {
+    background:  rgba(40,40,40, .75);
+    
+}
+
+.overlay button {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../images/close.png) no-repeat center center;
+    background-size: 40px 40px;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+
 
 
 
@@ -328,6 +414,25 @@ img.wave {
 
 
 /*--------------------
+    LOADING
+--------------------*/
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loading.gif) center no-repeat #fff;
+}
+
+
+/*--------------------
     GENERAL
 --------------------*/
 
@@ -345,6 +450,10 @@ img {
     border: 0;
 }
 
-body{
-        background: #fff;
+
+html, body {
+    height: 100%;
+    background: #fff;
+    position: relative;
+    transition: all 1s ease-in-out;
 }
